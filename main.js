@@ -66,16 +66,26 @@ console.log(isDivisible(210, 10));
 
 console.log("*Question 7");
 function oddNumbers(int) {
-  for (i=1;i<int;i+=2) {
-    if (int % i !== 0) {
-      if (int > 40 && int < 100) {
-        console.log(i);
-      } else if (int < 40) {
-        console.log(i);
-      } else {
-        return "Pick a number below 40 plz.";
+  if (int % 2 !== 0) {
+  if (int <= 40) {
+    for (i=int;i<40;i+=2) {
+      console.log(i);
+    }
+  } else if (int > 40 && int < 100 ) {
+    for (j=int; j<100; j+=2) {
+      console.log(j);
     }
   }
+} else if (int % 2 === 0){
+  if (int <= 40) {
+    for (k=int+1;k<40;k+=2) {
+      console.log(k);
+    }
+  } else if (int > 40 && int < 100 ) {
+    for (l=int+1; l<100; l+=2) {
+      console.log(l);
+    }
+}
 }
 }
 oddNumbers(39);
