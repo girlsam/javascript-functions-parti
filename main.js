@@ -63,3 +63,23 @@ function isDivisible(num1, num2) {
 console.log(isDivisible(14, 7));
 console.log(isDivisible(14, 6));
 console.log(isDivisible(210, 10));
+
+console.log("*Question 7");
+function oddNumbers(int) {
+  for (i=1;i<int;i+=2) {
+    if (int % i !== 0) {
+      if (int > 40 && int < 100) {
+        console.log(i);
+      } else if (int < 40) {
+        console.log(i);
+      } else {
+        return "Pick a number below 40 plz.";
+    }
+  }
+}
+}
+oddNumbers(39);
+console.log("///");
+oddNumbers(75);
+console.log("///");
+oddNumbers(22);
