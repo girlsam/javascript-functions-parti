@@ -27,16 +27,18 @@ function discountPercentage(price, discount) {
 console.log(discountPercentage(10, 130));
 console.log(discountPercentage(100, 4));
 
-//Define a function called stringCapitalize that takes a string as an argument and returns the same string with the first letter of each word capitalized. Assume that each individual word is separated by only one space.
-
 console.log("*Question 4");
 function stringCapitalize(str) {
-  var lowerCase = str.substr(1, str.length).toLowerCase();
-  var upperCase = str.substr(0, 1).toUpperCase();
-  return upperCase + lowerCase;
+    str = str.toLowerCase();
+    str = str.split(' ');
+    for (i = 0; i < str.length; i++) {
+      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+return str.join(' ');
 }
 console.log(stringCapitalize("doodle"));
 console.log(stringCapitalize("sam goldsmith"));
+console.log(stringCapitalize("a dog went by"));
 
 console.log("*Question 5");
 function evenNumbers(int) {
